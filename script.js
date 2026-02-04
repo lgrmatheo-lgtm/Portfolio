@@ -1,4 +1,6 @@
 
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -67,6 +69,15 @@ window.addEventListener("scroll", () => {
         header.style.backdropFilter = "blur(0px)";
         header.style.webkitBackdropFilter = "blur(0px)";
     }
+});
+
+
+const burger = document.querySelector(".burger");
+const navWrapper = document.querySelector(".nav-wrapper");
+
+burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navWrapper.classList.toggle("active");
 });
 
 
